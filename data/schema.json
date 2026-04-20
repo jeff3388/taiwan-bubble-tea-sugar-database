@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "台灣手搖飲品項（Taiwan Bubble Tea Drink Entry）",
+  "type": "object",
+  "required": ["id", "name_zh", "brand_zh", "size_ml", "sugar_level", "sugar_g", "carbs_g", "calories_kcal", "toppings_included", "source"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "唯一識別碼，kebab-case，格式：品牌縮寫-飲品-糖度-容量"
+    },
+    "name_zh": { "type": "string", "description": "完整中文名稱，含品牌" },
+    "name_en": { "type": "string", "description": "英文名稱（可選）" },
+    "brand_zh": { "type": "string", "description": "品牌名稱" },
+    "category": {
+      "type": "string",
+      "enum": ["珍珠奶茶", "鮮奶茶", "水果茶", "茶類", "奶蓋茶", "特調"],
+      "description": "飲品分類"
+    },
+    "size_ml": { "type": "integer", "description": "容量（毫升）" },
+    "sugar_level": {
+      "type": "string",
+      "enum": ["full", "half", "less", "none", "original"],
+      "description": "full=全糖, half=半糖, less=微糖, none=無糖, original=原味（不可調整）"
+    },
+    "sugar_g": { "type": "number", "description": "含糖量（克），包含天然糖與添加糖" },
+    "sugar_teaspoons": { "type": "number", "description": "等效茶匙數（1 茶匙 = 4g）" },
+    "carbs_g": { "type": "number", "description": "總碳水化合物（克），含珍珠等配料若 toppings_included=true" },
+    "calories_kcal": { "type": "integer", "description": "熱量（大卡）" },
+    "fat_g": { "type": "number", "description": "脂肪（克），若有奶類成分" },
+    "protein_g": { "type": "number", "description": "蛋白質（克）" },
+    "gi_estimated": {
+      "type": "number",
+      "description": "估算升糖指數（基於糖分組成，蔗糖 GI≈65，果糖 GI≈25，混合估算）"
+    },
+    "gl_estimated": {
+      "type": "number",
+      "description": "估算升糖負荷（GL = GI × carbs_g / 100）"
+    },
+    "toppings_included": {
+      "type": "boolean",
+      "description": "true=熱量/碳水含配料（珍珠/布丁/椰果等）；false=不含配料"
+    },
+    "toppings": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "包含的配料清單"
+    },
+    "who_daily_sugar_pct": {
+      "type": "number",
+      "description": "佔 WHO 每日游離糖建議上限的百分比（上限 50g/天）"
+    },
+    "source": { "type": "string", "description": "資料來源說明" },
+    "notes": { "type": "string", "description": "備註" },
+    "_meta": {
+      "type": "object",
+      "properties": {
+        "last_updated": { "type": "string", "format": "date" },
+        "verified_by": { "type": "string" }
+      }
+    }
+  }
+}

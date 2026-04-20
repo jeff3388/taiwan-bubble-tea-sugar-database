@@ -1,0 +1,110 @@
+{
+  "sugar_levels": {
+    "description": "台灣手搖飲糖度選項與實際含糖量換算說明",
+    "source": "衛福部食藥署 2020–2022 連鎖飲料店含糖量抽查報告",
+    "note": "以下比例為業界通用參考值，各品牌實際配方可能有差異（誤差範圍 ±15%）",
+    "levels": [
+      {
+        "level": "full",
+        "label_zh": "全糖",
+        "sugar_ratio": 1.0,
+        "description": "標準配方，以飲品原始糖漿量為 100%"
+      },
+      {
+        "level": "half",
+        "label_zh": "半糖",
+        "sugar_ratio": 0.5,
+        "description": "約為全糖的 50%，但注意：牛奶中的乳糖、珍珠的澱粉糖不會減少"
+      },
+      {
+        "level": "less",
+        "label_zh": "微糖",
+        "sugar_ratio": 0.3,
+        "description": "約為全糖的 30%，仍有明顯甜味"
+      },
+      {
+        "level": "none",
+        "label_zh": "無糖",
+        "sugar_ratio": 0.0,
+        "description": "不加糖漿，但天然乳糖（牛奶）和配料澱粉糖仍存在。完全無糖版糖分通常為 5–15g（來自牛奶/配料）"
+      },
+      {
+        "level": "original",
+        "label_zh": "原味（不可調整）",
+        "sugar_ratio": 1.0,
+        "description": "部分特調飲品（如黑糖珍珠）糖分已融入製作過程，無法調整"
+      }
+    ]
+  },
+  "common_toppings": [
+    {
+      "topping_zh": "珍珠（波霸）",
+      "topping_en": "Large tapioca pearls (boba)",
+      "carbs_g_per_serving": 35,
+      "calories_kcal_per_serving": 150,
+      "gi_estimated": 75,
+      "gl_estimated": 26,
+      "notes": "木薯澱粉製成，GI 高，大份珍珠（約 80g）含碳水約 35g"
+    },
+    {
+      "topping_zh": "小珍珠",
+      "topping_en": "Mini tapioca pearls",
+      "carbs_g_per_serving": 25,
+      "calories_kcal_per_serving": 110,
+      "gi_estimated": 75,
+      "gl_estimated": 19,
+      "notes": "份量較小，碳水約為大珍珠的 70%"
+    },
+    {
+      "topping_zh": "布丁",
+      "topping_en": "Pudding (egg or taro)",
+      "carbs_g_per_serving": 18,
+      "calories_kcal_per_serving": 90,
+      "gi_estimated": 55,
+      "gl_estimated": 10,
+      "notes": "雞蛋布丁蛋白質較高，GI 相對較低"
+    },
+    {
+      "topping_zh": "仙草凍",
+      "topping_en": "Grass jelly",
+      "carbs_g_per_serving": 8,
+      "calories_kcal_per_serving": 35,
+      "gi_estimated": 30,
+      "gl_estimated": 2,
+      "notes": "膳食纖維含量高（約 3g），是相對低 GL 的配料選擇"
+    },
+    {
+      "topping_zh": "椰果",
+      "topping_en": "Coconut jelly (nata de coco)",
+      "carbs_g_per_serving": 12,
+      "calories_kcal_per_serving": 55,
+      "gi_estimated": 40,
+      "gl_estimated": 5,
+      "notes": "膳食纖維豐富，熱量和 GL 均較低，是較佳的配料選擇"
+    },
+    {
+      "topping_zh": "芋圓",
+      "topping_en": "Taro ball",
+      "carbs_g_per_serving": 30,
+      "calories_kcal_per_serving": 130,
+      "gi_estimated": 60,
+      "gl_estimated": 18,
+      "notes": "芋頭澱粉製成，GI 介於珍珠和仙草之間"
+    },
+    {
+      "topping_zh": "奶蓋（芝士奶蓋）",
+      "topping_en": "Cheese foam / milk foam",
+      "carbs_g_per_serving": 10,
+      "calories_kcal_per_serving": 120,
+      "gi_estimated": 30,
+      "gl_estimated": 3,
+      "notes": "脂肪含量高（約 10g），碳水和 GI 低，但增加大量熱量"
+    }
+  ],
+  "who_sugar_guidelines": {
+    "source": "WHO (2015). Guideline: Sugars intake for adults and children. World Health Organization.",
+    "free_sugars_daily_strong_recommendation_g": 50,
+    "free_sugars_daily_conditional_recommendation_g": 25,
+    "note": "游離糖（free sugars）包含添加糖與天然果汁中的糖。牛奶中的乳糖不計入游離糖。"
+  }
+}
